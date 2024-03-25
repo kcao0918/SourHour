@@ -1,5 +1,7 @@
 import { useState, useEffect } from "react";
-
+import Navbar from "./components/navbar";
+import FloatingActionButton from "./components/floating_add_btn";
+import CurrentBakesStandard from "./components/SourD_currentBakes";
 // functions
 import { getTest } from "./functions/test";
 
@@ -13,8 +15,9 @@ function App() {
   }, []);
   return (
     <div>
-      <h1>{data}</h1>
-      <h2 className="text-2xl underline text-red-500">apples</h2>
+      <CurrentBakesStandard />
+      <FloatingActionButton />
+      <Navbar />
     </div>
   );
 }
